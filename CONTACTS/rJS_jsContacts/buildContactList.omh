@@ -1,0 +1,14 @@
+Do iContactList.$definefromsqlclass('sContacts')
+Do iContactList.$sessionobject.$assign(iSQLObjRef)
+
+Do iContactList.$select()
+Do iContactList.$fetch(kFetchAll)
+
+Do iContactList.$cols.$add(iConcatName)
+Calculate lTotal as iContactList.$linecount
+
+;  format name
+For lNum from 1 to lTotal step 1
+	Calculate iConcatName as con(iContactList.[lNum].FirstName,kSp,iContactList.[lNum].LastName)
+	Do iContactList.[lNum].$assigncols(,,,,,,,,,,,,iConcatName)
+End For

@@ -1,0 +1,26 @@
+
+Do method setup
+
+Do iFileRow.$define(MimeList,"Binary Variable")
+Calculate iFileRow.C2 as "tData"
+
+Calculate iSep as '/'
+
+Calculate iPicPath as con("images",iSep,"applets",iSep,"omnis_contacts_banner1.png")
+Calculate iSplashPath as con("images",iSep,"applets",iSep,"welcome_contacts_big1.png")
+
+Do $itasks.[$clib().$name].$getSess Returns iSQLObjRef
+
+Do iContactList.$define(iContactName,iEmailWork,iWorkTel)
+
+Do iSalutationList.$define(iSalutation)
+Do iSalutationList.$add("Mr")
+Do iSalutationList.$add("Mrs")
+Do iSalutationList.$add("Miss")
+Do iSalutationList.$add("Ms")
+Do iSalutationList.$add("Dr")
+Do iSalutationList.$add("Prof")
+Do iSalutationList.$line.$assign(1)
+
+Do method buildContactList
+Do iContactRow.$sessionobject.$assign(iSQLObjRef)

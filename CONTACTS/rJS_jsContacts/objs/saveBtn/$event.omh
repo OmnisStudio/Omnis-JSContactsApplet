@@ -1,0 +1,10 @@
+On evClick
+	Do method populateRow
+	Do method commitChanges
+	Calculate iDetailPane as kFalse
+	Calculate iNewContact as kFalse
+	
+	Do method buildContactList
+	
+	Do $cinst.$objs.contactTabStrip.$currenttab.$assign(1)
+	Do $cobj.$enabled.$assign(kFalse)

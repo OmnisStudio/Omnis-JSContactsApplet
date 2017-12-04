@@ -1,0 +1,28 @@
+If iNewContact
+	Calculate iContactRow.ID as iContactList.$cols.ID.$maximum()+1
+Else
+	Calculate iContactRow.ID as iContactList.[iContactList.$line].ID
+End If
+
+Calculate iContactRow.FirstName as iFirstName
+Calculate iContactRow.LastName as iLastName
+Calculate iContactRow.TelWork as iTelWork
+Calculate iContactRow.TelHome as iTelHome
+Calculate iContactRow.TelMob as iTelMob
+Calculate iContactRow.EmailWork as iEmailWork
+Calculate iContactRow.EmailHome as iEmailHome
+Calculate iContactRow.Company as iCompany
+Calculate iContactRow.Title as iTitle
+
+If not(isnull(iPicture))
+	Do pictformat(iPicture) Returns lPicFormat     ;; find the format
+	If not(lPicFormat='PNG')
+		Do pictconvto(lPicFormat,iPicture,"PNG") Returns lBinary     ;; save in png format
+	End If
+Else
+	Calculate iPicture as #NULL
+End If
+
+Calculate iContactRow.Photo as iPicture
+Do iSalutationList.$loadcols()
+Calculate iContactRow.Salutation as iSalutation

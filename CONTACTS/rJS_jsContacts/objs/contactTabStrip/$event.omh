@@ -1,0 +1,12 @@
+On evTabSelected
+	Calculate iCurrTab as pTabNumber
+	If pTabNumber=2
+		Do method loadRecord (iContactList.$line)
+		If iNewContact|iContactList.$line     ;; ram 9/2/13 - only enable save button if we have data or are entering a new record
+			Do $cinst.$objs.saveBtn.$enabled.$assign(kTrue)
+		End If
+	Else If pTabNumber=1
+		Do $cinst.$objs.pagePane.$objs.tabStrip.$currenttab.$assign(1)
+		Calculate iNewContact as kFalse
+		Do $cinst.$objs.saveBtn.$enabled.$assign(kFalse)
+	End If

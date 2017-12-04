@@ -1,0 +1,21 @@
+Do iContactList.[pLine].$loadcols()
+
+If pLine
+	Calculate iOldRow as iContactList.[pLine]
+	Calculate iPicture as iContactList.Photo
+Else
+	Do method readBinFile (iDefaultPicturePath,iPicture)
+End If
+
+Do iSalutationList.$search(iSalutation=iContactList.Salutation)
+Do iSalutationList.$first(kTrue)
+
+Calculate iFirstName as iContactList.FirstName
+Calculate iLastName as iContactList.LastName
+Calculate iCompany as iContactList.Company
+Calculate iTitle as iContactList.Title
+Calculate iTelHome as iContactList.TelHome
+Calculate iTelWork as iContactList.TelWork
+Calculate iTelMob as iContactList.TelMob
+Calculate iEmailHome as iContactList.EmailHome
+Calculate iEmailWork as iContactList.EmailWork

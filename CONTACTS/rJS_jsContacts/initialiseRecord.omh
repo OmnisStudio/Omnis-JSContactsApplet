@@ -1,0 +1,14 @@
+Calculate iFirstName as
+Calculate iLastName as
+Calculate iCompany as
+Calculate iTitle as
+Calculate iTelHome as
+Calculate iTelWork as
+Calculate iTelMob as
+Calculate iEmailHome as
+Calculate iEmailWork as
+
+;  use default picture
+Do method readBinFile (iDefaultPicturePath,iPicture)
+
+Do iSalutationList.$line.$assign(1)

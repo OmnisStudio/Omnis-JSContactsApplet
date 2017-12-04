@@ -1,0 +1,7 @@
+;  save any data changes
+Calculate iUnSaved as kFalse
+If iNewContact
+	Do iContactRow.$insert() Returns #F
+Else
+	Do iContactRow.$update(iOldRow) Returns #F
+End If

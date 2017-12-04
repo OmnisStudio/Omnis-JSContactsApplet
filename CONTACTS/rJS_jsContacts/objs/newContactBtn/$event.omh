@@ -1,0 +1,11 @@
+On evClick
+	;  If iDetailPane
+	;  Do $cobj.$text.$assign("New Contact")
+	;  Do $cinst.$objs.contactTabStrip.$currenttab.$assign(1)
+	;  Do $cinst.$objs.saveBtn.$enabled.$assign(kFalse)
+	;  Calculate iDetailPane as kFalse
+	;  Else
+	Calculate iNewContact as kTrue
+	Do method initialiseRecord
+	Do method setEditPane
+	;  End If

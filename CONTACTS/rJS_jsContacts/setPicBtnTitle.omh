@@ -1,0 +1,5 @@
+If not(pHavePic)
+	Do $cinst.$objs.pagePane.$objs.addPhoto.$text.$assign("Add...")
+Else
+	Do $cinst.$objs.pagePane.$objs.addPhoto.$text.$assign("Change...")
+End If

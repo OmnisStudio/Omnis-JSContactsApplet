@@ -1,0 +1,20 @@
+Begin text block
+Text: {Contacts is an Omnis applet developed using the Javascript controls} (Carriage return)
+Text: (Carriage return)
+Text: {Function:} (Carriage return)
+Text: {The applet allows you to create a list of contacts with their details and optional picture.} (Carriage return)
+Text: (Carriage return)
+Text: {Usage:} (Carriage return)
+Text: {Select the New Contact button to begin data entry.  Once you have saved a contact, the list displays a summary of the data.} (Carriage return)
+Text: {You can then select a contact and either double-click or hit the Details tab to find out / edit the data.} (Carriage return)
+Text: (Carriage return)
+Text: {Components:} (Carriage return)
+Text: {The contact data is stored in a SQLite table called Contacts.  The schema class sContacts is an Omnis representation of the table definition.} (Carriage return)
+Text: {The applet uses the built-in SQL list functions $insert and $update to populate the table.} (Carriage return,Linefeed)
+Text: (Carriage return)
+Text: {Extending:} (Carriage return)
+Text: {The applet could be extended to allow an integrated email solution by incorporating the email object and developing forms to manage emails.} (Carriage return)
+Text: {You could also import an existing contact book from a csv or tab-delimited file.}
+End text block
+Get text block lAboutText
+Quit method lAboutText

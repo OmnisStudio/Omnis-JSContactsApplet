@@ -1,0 +1,4 @@
+;  show the edit pane
+Do $cinst.$objs.contactTabStrip.$currenttab.$assign(2)     ;; switching the tabs will auto switch the pane as well as the pane is a linked object
+Do $cinst.$objs.saveBtn.$enabled.$assign(kTrue)
+Calculate iDetailPane as kTrue

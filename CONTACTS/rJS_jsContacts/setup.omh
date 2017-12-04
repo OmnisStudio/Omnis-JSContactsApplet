@@ -1,0 +1,25 @@
+If iCurrBP=320
+	Do $cinst.$objs.contactTabStrip.$selectedtab.$assign(3)
+	Do $cinst.$objs.contactTabStrip.$tabvisible.$assign(kTrue)
+	Do $cinst.$objs.contactTabStrip.$selectedtab.$assign(1)
+	Do $cinst.$objs.aboutBtn.$visible.$assign(kFalse)
+	Do $cinst.$objs.splash.$visible.$assign(kFalse)
+	Do $ctask.$getAbout() Returns iAbout
+	
+	Do $cinst.$objs.pagePane.$objs.contactsList.$::columnwidths.$assign("80,156,80")
+	If iAboutOpen
+		Do $cinst.$closeAbout()
+	End If
+Else
+	Do $cinst.$objs.contactTabStrip.$selectedtab.$assign(3)
+	Do $cinst.$objs.contactTabStrip.$tabvisible.$assign(kFalse)
+	Do $cinst.$objs.contactTabStrip.$selectedtab.$assign(1)
+	Do $cinst.$objs.aboutBtn.$visible.$assign(kTrue)
+	Do $cinst.$objs.splash.$visible.$assign(kTrue)
+	
+	Do $cinst.$objs.pagePane.$objs.contactsList.$::columnwidths.$assign("250,400,180")
+	If iCurrTab=3
+		Do $cinst.$objs.contactTabStrip.$currenttab.$assign(1)
+	End If
+End If
+Quit method

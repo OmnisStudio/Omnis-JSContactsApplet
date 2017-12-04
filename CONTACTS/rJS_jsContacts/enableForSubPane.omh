@@ -1,0 +1,5 @@
+Do $cinst.$objs.pagePane.$objs.contactsList.$hideselection.$assign(not(pEnable))     ;; st/js/134
+Do $cinst.$objs.contactTabStrip.$enabled.$assign(pEnable)
+Do $cinst.$objs.pagePane.$objs.contactsList.$enabled.$assign(pEnable)
+Do $cinst.$objs.pagePane.$objs.addPhoto.$enabled.$assign(pEnable)
+Do $cinst.$objs.aboutBtn.$enabled.$assign(pEnable)

@@ -1,0 +1,12 @@
+On evClick
+	
+On evDoubleClick
+	Do method editUser (pVertCell)
+	
+On evCellChanged
+	;  Do $cinst.$showmessage(con("H:",pHorzCell,kSp,"V:",pVertCell,kSp,kSp,iContactList.[pVertCell].C[pHorzCell]))
+	Calculate iUnSaved as kTrue
+	
+On evHeaderClick
+	
+On evHeadedListDisplayOrderChanged

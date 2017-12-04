@@ -1,0 +1,2 @@
+On evTabSelected
+	Do $cinst.$objs.pagePane.$objs.contactPane.$currentpage.$assign(pTabNumber)

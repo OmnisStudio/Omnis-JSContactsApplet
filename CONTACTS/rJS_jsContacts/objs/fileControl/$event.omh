@@ -1,0 +1,5 @@
+On evFileUploaded
+	Calculate iPicture as tData
+	
+On evFileUploadDialogClosed
+	Do method setPicBtnTitle (kHavePic)

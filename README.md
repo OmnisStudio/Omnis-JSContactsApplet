@@ -1,6 +1,7 @@
 # Omnis-JSContactsApplet
 
 This is a responsive applet generated using the Omnis JS Client to create a demo contacts app.
+There is a non-responsive version that can be viewed here http://tinyurl.com/OmnisContacts2.
 
 Requires Omnis Studio 8.1.2 or above
 
